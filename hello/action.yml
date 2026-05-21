@@ -1,0 +1,16 @@
+name: Hello Action
+
+description: A simple GitHub Action that greets the user.
+
+inputs:
+  name:
+    description: "Your name"
+    required: true
+    default: "World"
+
+runs:
+  using: "composite"
+  steps:
+
+    - run: echo "Hello ${{ inputs.name }}!"
+      shell: bash
